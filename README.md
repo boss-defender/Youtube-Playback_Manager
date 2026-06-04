@@ -9,7 +9,7 @@ but when we pause video tutorials, we have to go to youtube music tab to continu
 
 # how to use it ?
 
-1) download the zip file
+1) download the zip file & unzip it .
 2) go to chrome://extensions/
 
 3) now turn on developer mode in right corner 
