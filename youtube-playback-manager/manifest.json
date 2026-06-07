@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music Tutorial Playback Manager",
+  "version": "1.0.0",
+  "description": "Automatically pauses YouTube Music while a YouTube tutorial is playing, then resumes only when appropriate.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://music.youtube.com/*",
+    "https://www.youtube.com/*",
+    "https://youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://music.youtube.com/*",
+        "https://www.youtube.com/*",
+        "https://youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "YouTube Playback Manager",
+    "default_popup": "popup.html"
+  }
+}
